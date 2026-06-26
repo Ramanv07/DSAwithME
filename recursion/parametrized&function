@@ -1,0 +1,72 @@
+// recursion/parametrized&function
+
+
+In recursion and backtracking, **Parameterized Recursion** and **Functional Recursion** are two fundamental structural approaches to managing state and calculating results.
+
+The core difference lies in **where** and **when** the calculation happens: on the way down into the recursion, or on the way back up as the stack unwinds.
+
+---
+
+## 1. Parameterized Recursion
+
+In this approach, you carry the calculated result or state down through the function **parameters (arguments)**. The function usually returns `void`, and once it hits the base case, the final answer is completely ready to be printed or added to a global list.
+
+```java
+public class ParameterizedExample {
+    // The 'sum' variable accumulates the answer on the way down
+    public static void calculateSum(int i, int sum) {
+        // Base Case: When we hit 0, the answer is already fully calculated
+        if (i < 1) {
+            System.out.println("Final Sum: " + sum);
+            return;
+        }
+        
+        // Pass the updated calculation into the next recursive call
+        calculateSum(i - 1, sum + i);
+    }
+
+    public static void main(String[] args) {
+        calculateSum(3, 0); // Start with i = 3 and an initial sum of 0
+    }
+}
+
+```
+
+---
+
+## 2. Functional Recursion
+
+In this approach, the function **returns a value** instead of using a tracking parameter. You do not pass the accumulated answer forward. Instead, the base case returns a small sub-answer, and the actual calculation happens on the way back up (bottom-to-top) as the recursive calls pop off the stack.
+
+```java
+public class FunctionalExample {
+    // The function promises to return an integer result
+    public static int calculateSum(int n) {
+        // Base Case
+        if (n == 0) {
+            return 0;
+        }
+        
+        // Wait for the inner call to resolve, then add 'n' to it on the way back up
+        return n + calculateSum(n - 1);
+    }
+
+    public static void main(String[] args) {
+        int result = calculateSum(3);
+        System.out.println("Final Sum: " + result);
+    }
+}
+
+```
+
+---
+
+## Quick Comparison
+
+| Feature | Parameterized Recursion | Functional Recursion |
+| --- | --- | --- |
+| **Return Type** | Usually `void`. | A specific data type (e.g., `int`, `boolean`, `List`). |
+| **When does calculation happen?** | **On the way down** (Top to Bottom). | **On the way back up** (Bottom to Top). |
+| **Where is the final result found?** | Inside the base case block. | At the initial caller inside the `main` method. |
+
+When tackling advanced backtracking problems (like the *N-Queens* puzzle or *Sudoku Solver*), you will often see a combination of both: you pass a path list as a **parameter** (Parameterized), but the function returns a `boolean` (Functional) to tell the previous step whether that path was successful or needs to be backtracked.
