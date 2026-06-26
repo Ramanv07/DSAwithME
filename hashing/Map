@@ -1,0 +1,37 @@
+time compelexity in Map
+
+storing and fetching - log N 
+in best ,worst,avg
+
+
+unorderdmap 
+ storing and fetching - o(1) in avg or best
+ in worst case O(N)
+
+ prefer unorderdmap if that fail (limit time excet)
+ switch back to map 
+
+
+ Hasing 
+ (1) division metho dme 
+ arr[i]%10
+ we arrage as a key value paire 
+ in chaing 
+
+ like me have arr= [1,2,5,16,26,36,58,98]
+ map arry size not more that >10
+
+0
+1-> 1
+2->2
+3
+4
+5->5
+6->16,26,36// linear chaning 
+7
+8->58,98
+9
+ beacause of this linear chaing that is not alway is order  so there is collision occur 
+ due to that collision 
+ unordered map worst time complexity is O(n)
+ 
