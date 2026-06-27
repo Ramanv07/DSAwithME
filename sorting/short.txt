@@ -8,3 +8,15 @@ time compelexity is O(n^2) in worst,best and avg case
 
        BUbble sort 
 //bubble sort -> push max into last by adject swaps  
+time compelexity 
+avg & worst -> O(N^2)
+best case -> O(N) is arry is alreasy sorted 
+ 
+    Insertion sort 
+//Insertion sort -> takes an element & place it is its correct loaction 
+time compelexity
+avg & worst -> O(N^2)
+best case -> O(N) is arry is alreasy sorted 
+
+    Marge sort 
+    

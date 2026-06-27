@@ -1,7 +1,7 @@
 package sorting;
 import java.util.Scanner;
 
-public class bubble {
+public class insertion {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
@@ -14,25 +14,16 @@ public class bubble {
             arr[i] = sc.nextInt();
         }
 
-        // bubble Sort Algorithm
-        for(int i = n-1 ; i >= 0; i--){
-            int didswap =0;
-            for(int j = 0; j <= i-1; j++){
-                if(arr[j] > arr[j+1]){
-                    int temp = arr[j+1];
-            arr[j+1] = arr[j];
+        // inerstion Sort Algorithm
+        for(int i = 0 ; i <= n-1; i++){
+               int j=i;
+            while(j>0 && arr[j-1]>arr[j]){
+            int temp = arr[j-1];
+            arr[j-1] = arr[j];
             arr[j] = temp;
-            didswap=1;
+            j--;
                 }
             }
-            
-            if (didswap==0){
-                break;
-            }
-            System.out.println("swap");
-            
-        }
-
         System.out.println("Sorted array:");
         for(int num : arr){
             System.out.print(num + " ");
@@ -41,5 +32,4 @@ public class bubble {
         sc.close();
     
     }
-    
 }
