@@ -19,4 +19,4 @@ avg & worst -> O(N^2)
 best case -> O(N) is arry is alreasy sorted 
 
     Marge sort 
-    
+    is 
