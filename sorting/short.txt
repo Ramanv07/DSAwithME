@@ -1,0 +1,10 @@
+
+     selection sort
+
+selection sort is select minimum value from the array and swap it with the first element of the unsorted array. Then, it selects the next minimum value and swaps it with the second element of the unsorted array, and so on until the entire array is sorted.
+
+time compelexity is O(n^2) in worst,best and avg case 
+      
+
+       BUbble sort 
+//bubble sort -> push max into last by adject swaps  

@@ -1,7 +1,7 @@
-package hashing;
-import java.util.Scanner;
+package hashing; //
+import java.util.Scanner; // scanner 
 import java.util.HashMap; // Imported HashMap
-import java.util.Map;
+import java.util.Map; //imported map 
 
 public class map_exp {
     public static void main (String[] args){
