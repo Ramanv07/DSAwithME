@@ -1,3 +1,5 @@
+//Find the second largest and second smallest element in an array
+//time complexity is O(n) beacause we are traversing the array only once
 package Array.easy;
 
 
